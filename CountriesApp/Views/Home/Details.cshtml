@@ -1,0 +1,85 @@
+﻿@model IEnumerable<CountriesApp.Country>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name.official)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.subregion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.capital)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.languages)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name.official)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subregion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.capital)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.languages.ara)
+                @Html.DisplayFor(modelItem => item.languages.aym)
+                @Html.DisplayFor(modelItem => item.languages.ces)
+                @Html.DisplayFor(modelItem => item.languages.cym)
+                @Html.DisplayFor(modelItem => item.languages.deu)
+                @Html.DisplayFor(modelItem => item.languages.est)
+                @Html.DisplayFor(modelItem => item.languages.fin)
+                @Html.DisplayFor(modelItem => item.languages.fra)
+                @Html.DisplayFor(modelItem => item.languages.hrv)
+                @Html.DisplayFor(modelItem => item.languages.hun)
+                @Html.DisplayFor(modelItem => item.languages.ita)
+                @Html.DisplayFor(modelItem => item.languages.jpn)
+                @Html.DisplayFor(modelItem => item.languages.kor)
+                @Html.DisplayFor(modelItem => item.languages.nld)
+                @Html.DisplayFor(modelItem => item.languages.pap)
+                @Html.DisplayFor(modelItem => item.languages.per)
+                @Html.DisplayFor(modelItem => item.languages.prs)
+                @Html.DisplayFor(modelItem => item.languages.pus)
+                @Html.DisplayFor(modelItem => item.languages.pol)
+                @Html.DisplayFor(modelItem => item.languages.por)
+                @Html.DisplayFor(modelItem => item.languages.que)
+                @Html.DisplayFor(modelItem => item.languages.rus)
+                @Html.DisplayFor(modelItem => item.languages.slk)
+                @Html.DisplayFor(modelItem => item.languages.spa)
+                @Html.DisplayFor(modelItem => item.languages.swe)
+                @Html.DisplayFor(modelItem => item.languages.urd)
+                @Html.DisplayFor(modelItem => item.languages.zho)
+                @Html.DisplayFor(modelItem => item.languages.eng)
+                @Html.DisplayFor(modelItem => item.languages.tvl)
+                @Html.DisplayFor(modelItem => item.languages.tsn)
+                @Html.DisplayFor(modelItem => item.languages.tuk)
+                @Html.DisplayFor(modelItem => item.languages.ind)
+                @Html.DisplayFor(modelItem => item.languages.ber)
+                @Html.DisplayFor(modelItem => item.languages.mey)
+                @Html.DisplayFor(modelItem => item.languages.ell)
+                @Html.DisplayFor(modelItem => item.languages.som)
+                @Html.DisplayFor(modelItem => item.languages.dan)
+                @Html.DisplayFor(modelItem => item.languages.fao)
+                @Html.DisplayFor(modelItem => item.languages.bel)
+                @Html.DisplayFor(modelItem => item.languages.heb)
+                @Html.DisplayFor(modelItem => item.languages.mya)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

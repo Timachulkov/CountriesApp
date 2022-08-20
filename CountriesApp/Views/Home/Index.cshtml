@@ -1,0 +1,46 @@
+﻿@model IEnumerable<CountriesApp.Country>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Countries</h1>
+
+
+
+@using(Html.BeginForm("Details", "Home", FormMethod.Post))
+{
+    <form action="Details">
+        <input type="text" name="id" />
+        <input type="submit"  value="Отправить"/>
+        <br/>
+    </form>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name.official)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.capital)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.OrderBy(p => p.name.official)) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.name.official)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.capital)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new {  id=item.name.common  }) 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
