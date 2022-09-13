@@ -43,28 +43,6 @@ namespace CountriesApp.Controllers
             _logger = logger;
         }
 
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
-        //[HttpGet]
-        //public async Task<string> Get()
-        //{
-        //    var URL = "https://restcountries.com/v3.1/all";
-        //    var httpClient = new HttpClient();
-        //    var responce = await httpClient.GetAsync(URL);
-        //    return await responce.Content.ReadAsStringAsync();
-        //}
-        //public string Index()
-        //{
-        //    return "Hello METANIT.COM";
-        //}
-        //public IActionResult Details()
-        //{
-        //    return View();
-        //}
-
         public IActionResult Privacy()
         {
             return View();
