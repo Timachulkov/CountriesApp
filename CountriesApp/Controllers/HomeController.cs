@@ -12,15 +12,12 @@ namespace CountriesApp.Controllers
             List<Country> countres = new List<Country>();
             client.BaseAddress = new Uri("https://restcountries.com/v3.1/all");
             var responce = client.GetAsync("");
-            responce.Wait();
 
             var test = responce.Result;
             if(test.IsSuccessStatusCode) 
             {
                 var display = test.Content.ReadFromJsonAsync<List<Country>>();
-                display.Wait();
                 countres = display.Result;
-               
             }
             return View(countres);
         }
@@ -30,13 +27,11 @@ namespace CountriesApp.Controllers
             List<Country> country = new List<Country>();
             client.BaseAddress = new Uri("https://restcountries.com/v3.1/name/"+ id);
             var responce = client.GetAsync("");
-            responce.Wait();
 
             var test = responce.Result;
             if (test.IsSuccessStatusCode)
             {
                 var display = test.Content.ReadFromJsonAsync<List<Country>>();
-                display.Wait();
                 country = display.Result;
             }
             return View(country);
